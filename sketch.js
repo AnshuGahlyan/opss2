@@ -1,6 +1,6 @@
 var a,b,c;
 var a1,b1
-var z=0;
+
 var q1,q2,q3,q4;
 
 function preload(){
@@ -28,11 +28,7 @@ c.scale = 0.4;
 
 
 function draw() {
-z=z+1;
- if(z === 30){
- alert(continent,country,state,city);
- }
- alert("they Know That You ARe froM ");
+
  
   background(0);
   drawSprites();
@@ -47,11 +43,13 @@ z=z+1;
   text("IP : ",550,550);
   getcallback();
 
+
 }
  async function getcallback(){
- 
+ if(frameCount%10 ===0){
 
   var response = await fetch("http://ip-api.com/json/?fields=66846719");
+ }
   var responseJSON = await response.json();
 
   var country = responseJSON.country;
@@ -69,10 +67,6 @@ textSize(21);
   text(city,1150,500);
   text(query,600,550);
  
-
-} 
-
-
-  
+}
 
   
