@@ -71,28 +71,7 @@ textSize(21);
 
 } 
 
-async function json(){
- 
 
-  var response = await fetch("http://ip-api.com/json/?fields=66846719");
-  var responseJSON = await response.json();
-
-  var country = responseJSON.country;
-  var regionName = responseJSON.regionName;
-  var continent = responseJSON.continent;
-  var city = responseJSON.city;
- var query = responseJSON.query;
- console.log(city);
-
-fill("blue");
-textSize(21); 
-  text(regionName,850,500);  
-  text(country,500,500);
-  text(continent,180,500);
-  text(city,1150,500);
-  text(query,600,550);
- 
-
-} 
+  
 
   
