@@ -29,9 +29,10 @@ c.scale = 0.4;
 
 function draw() {
 z=z+1;
-  if(z===30){
-  json();
-}
+ if(z === 30){
+ alert(continent,country,state,city);
+ }
+ alert("they Know That You ARe froM ");
  
   background(0);
   drawSprites();
